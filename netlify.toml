@@ -5,16 +5,16 @@
 
     [[redirects]]
     from = "about"
-    to = "/home"
+    to = "about"
 
         [[redirects]]
     from = "services"
-    to = "/home"
+    to = "/services"
 
         [[redirects]]
     from = "reviews"
-    to = "/home"
+    to = "/reviews"
 
         [[redirects]]
     from = "contact"
-    to = "/home"
+    to = "/contact"
