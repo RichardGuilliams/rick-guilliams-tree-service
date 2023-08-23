@@ -4,17 +4,17 @@
     publish = "build"
 
     [[redirects]]
-    from = "about"
+    from = "/about"
     to = "/pages/about"
 
         [[redirects]]
-    from = "services"
+    from = "/services"
     to = "/pages/services"
 
         [[redirects]]
-    from = "reviews"
+    from = "/reviews"
     to = "/pages/reviews"
 
         [[redirects]]
-    from = "contact"
+    from = "/contact"
     to = "/pages/contact"
