@@ -2,3 +2,19 @@
     command = "npm run build"
     functions = "functions"
     publish = "build"
+
+    [[redirects]]
+    from = "about"
+    to = "/home"
+
+        [[redirects]]
+    from = "services"
+    to = "/home"
+
+        [[redirects]]
+    from = "reviews"
+    to = "/home"
+
+        [[redirects]]
+    from = "contact"
+    to = "/home"
