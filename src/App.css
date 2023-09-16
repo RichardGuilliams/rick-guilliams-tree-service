@@ -38,6 +38,9 @@
 }
 
 /* ************************************************************************************************* */
+/* Custom CSS
+/* ************************************************************************************************* */
+
 :root{
   --color-button: rgb(25, 240, 25);
   --color-overlay: rgba(0, 0, 0, 0.5);
@@ -102,14 +105,20 @@ li{
   color: var(--color-primary);
 }
 
+.home{
+  width: 100vw;
+}
+
 .page{
   position: absolute;
   padding: 2rem;
   z-index: 2;
+  height: fit-content;
 }
 
 .page-section{
   margin-top: 5rem;
+  height: fit-content;
 }
 
 .page-overlay{
@@ -208,7 +217,7 @@ li{
 }
 
 .form{
-  width: 40rem;
+  width: 100%;
   background-color: var(--color-background);
   padding: 3rem;
   backdrop-filter: blur(3px);
@@ -271,3 +280,36 @@ li{
   color: var(--color-primary);
 }
 
+
+@media all and (max-width: 645px) {
+  .contact-heading{
+    margin: 4px;
+    margin-bottom: .5rem;
+  }
+
+  .page{
+    padding-top: 0px;
+  }
+
+  .page-heading{
+    font-size: calc(var(--font-size-medium) + 5px);
+  }
+
+  .header{
+    width: 100vw;
+  }
+
+  .footer{
+    width: 100vw;
+  }
+
+
+  .header-nav > li > a{
+    padding: 3px;
+    margin: 3px;
+  }
+
+  .form{
+    padding: 20px
+  }
+}
