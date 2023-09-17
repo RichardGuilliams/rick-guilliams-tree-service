@@ -4,7 +4,7 @@ const Home = () => {
             <div className='page-background'/>
             <div className="page-overlay"/>
             <div className='page home'>
-                <div className='page-section'>
+                <div className='page-section home-section'>
                     <h1 className='page-heading'>Having Problems With A Tree On Your Property? Let our experts safely remove it!
                         <span className='page-heading-span'>With over 20 years of experience, we offer affordable tree care for all.</span>
                     </h1>

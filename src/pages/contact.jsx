@@ -61,7 +61,7 @@ const Contact = () => {
             <div className='page-background'/>
             <div className="page-overlay"/>
             <div className="page contact">
-                <div className='page-section'>
+                <div className='page-section contact-section'>
                     <h1  className="page-heading">Contact Us</h1>
                     <form className='form' onSubmit={handleSubmit}>
                         <div className='form-section'>

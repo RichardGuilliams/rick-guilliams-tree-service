@@ -56,7 +56,7 @@
   --font-size-smaller: 1.25rem;
   --font-size-smallest: 1rem;
   
-  --page-padding: .5rem .5rem;
+  --page-padding: .5rem 0rem;
   --page-margin: .5rem .5rem;
   --page-width: 100dvw;
   --page-height: 100dvh;
@@ -68,16 +68,21 @@
   --card-padding: 2rem 2rem;
   --card-img-width: 14rem;
   --card-img-height: 14rem;
-
-  --extra-space-big: 3rem;
-  --extra-space-medium: 2rem;
-  --extra-space-small: 1rem;
-
+  
+  --extra-space-biggest: 7.5rem;
+  --extra-space-bigger: 6rem;
+  --extra-space-big: 4.5rem;
+  --extra-space-medium: 3rem;
+  --extra-space-small: 2.5rem;
+  --extra-space-smallest: 1rem;
+  
+  --nav-el-padding: .5rem .5rem;
+  --nav-el-margin: .5rem .5rem;
 
   --logo-margin: 0rem 0rem;
   --logo-padding: .5rem .5rem;
   --logo-size: 30px;
-
+  
   --fill-width: 100%;
   --fill-height: 100%;
 
@@ -134,9 +139,9 @@ li{
 }
 
 .header-link{
+  margin: var(--nav-el-margin);
+  padding: var(--nav-el-padding);
   text-decoration: none;
-  margin: var(--page-margin);
-  padding: var(--page-padding);
   color: var(--color-primary);
 }
 
@@ -152,6 +157,8 @@ li{
 }
 
 .page{
+  /* margin: var(--page-margin); */
+  padding: var(--page-padding);
   position: absolute;
   width: var(--page-width);
   z-index: 2;
@@ -161,15 +168,15 @@ li{
 .page-section{
   padding: var(--section-padding);
   margin: var(--section-margin);
-  margin-top: 5rem;
+  margin-top: var(--extra-space-big);
   height: fit-content;
 }
 
 .page-overlay{
   position: fixed;
   z-index: 1;
-  width: 100dvw;
-  height: 100dvh;
+  width: var(--page-width);
+  height: var(--page-height);
   background-color: var(--color-overlay);
 }
 
@@ -185,7 +192,7 @@ li{
 }
 
 .page-heading{
-  margin-bottom: .5rem;
+  margin-bottom: var(--extra-space-small);
   color: var(--color-primary);
   display: flex;
   flex-direction: column;
@@ -200,6 +207,7 @@ li{
 }
 
 .home{
+  padding-top: var(--extra-space-medium);
   display: flex;
   align-items: center; 
 }
@@ -211,21 +219,20 @@ li{
 }
 
 .home-cta{
-  font-size: 1rem;
+  font-size: var(--font-size-smaller);
   max-width: fit-content;
   display: inline-block;
   padding: .5rem 2rem;
   border-radius: 1000px;
   background-color: var(--color-button);
-  text-decoration: none;
   color: var(--color-primary);
   font-weight: 600;
-  margin-top: .5rem;
+  margin-top: var(--extra-space-smallest);
 }
 
 .services{
-  padding-top: 2rem;
-  padding-bottom: 8rem;
+  padding-top: var(--extra-space-medium);
+  padding-bottom: var(--extra-space-biggest);
 }
 
 .service-card{
@@ -241,7 +248,7 @@ li{
 }
 
 .service-card-desc{
-  font-size: var(--font-size-small)
+  font-size: var(--font-size-smaller)
 }
 
 .service-card-img{
@@ -250,18 +257,27 @@ li{
 }
 
 .about{
-  padding-top: 2rem;
-  padding-bottom: 8rem;
+  padding-top: var(--extra-space-medium);
+  padding-bottom: var(--extra-space-bigger);
 }
 
+.reviews{
+  padding-top: var(--extra-space-medium);
+}
+
+.about-desc{
+  font-size: var(--font-size-smaller);
+}
+
+
 .contact{
-  padding-top: 2rem;
-  padding-bottom: 8rem;
+  padding-top: var(--extra-space-small);
+  padding-bottom: var(--extra-space-biggest);
 }
 
 .form{
   background-color: var(--color-background);
-  padding: 3rem;
+  padding: var(--card-padding);
   backdrop-filter: blur(3px);
 }
 
@@ -285,15 +301,16 @@ li{
 }
 
 .form-button{
-  font-size: 1rem;
-  max-width: fit-content;
-  display: inline-block;
+  font-size: var(--font-size-smaller);
+  /* max-width: fit-content; */
+  /* display: inline-block; */
   padding: .5rem 1.25rem;
   border-radius: 1000px;
-  background-color: rgb(13, 238, 76);
-  text-decoration: none;
+  background-color: var(--color-button);
+  /* text-decoration: none; */
   color: var(--color-primary);
   margin-top: .5rem;
+  border: none;
 }
 
 .footer{
@@ -323,78 +340,58 @@ li{
   color: var(--color-primary);
 }
 
+.home-section{
+  margin-bottom: var(--extra-space-bigger);
+}
 
-@media all and (max-width: 670px) {
-  .contact-heading{
-    margin: 4px;
-    margin-bottom: .5rem;
+.contact-section{
+  margin-top: var(--extra-space-big);
+}
+
+@media all and (max-width: 700px) {
+  :root{
+    --font-size-big: 1.75rem;
+    --font-size-medium: 1.5rem;
+    --font-size-small: 1.25rem;
+    --font-size-smaller: 1rem;
+    --font-size-smallest: .75rem;
+    
+    --section-padding: 0rem 1.5rem 1.5rem 1.5rem;
+    --section-margin: .25rem .25rem;
+    
+    --card-padding: 1rem 2rem;
+    --card-margin: .5rem 0rem;
+    
+    --extra-space-biggest: 5.5rem;
+    --extra-space-big: 1.5rem;
+    --extra-space-small: 1rem;
+    
+    --blur: blur(3px);
   }
-
-  .page{
-    padding-top: 0px;
+  
+  .contact-section{
+    margin-top: 5rem;
   }
-
-  .page-heading{
-    font-size: calc(var(--font-size-medium) + 5px);
-  }
-
-  .header{
-    width: 100dvw;
-  }
-
-  .header-nav > li > a{
-    padding: 3px;
-    margin: 3px;
-  }
-
-  /* .form{
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-  }
-
-  input{
-    display: flex;
-    width: 20px;
-  }
-
-  textarea{
-    width: 100%;
-  } */
 }
 
 @media all and (max-width: 400px) {
   :root{
-    --font-size-big: 1rem;
+    --font-size-big: 1.75rem;
     --font-size-medium: 1.5rem;
-    --font-size-small: 1rem;
-    --font-size-smallest: .5rem;
-  
-    --page-padding: .5rem;
-    --section-padding: .25rem;
+    --font-size-small: 1.25rem;
+    --font-size-smaller: 1rem;
+    --font-size-smallest: .75rem;
+    
+    --section-padding: 0rem 1.5rem 1.5rem 1.5rem;
+    --section-margin: .25rem .25rem;
+
+    --card-padding: 1rem 2rem;
+    --card-margin: .5rem 0rem;
+
+    --extra-space-big: 2.5rem;
+    --extra-space-small: 1rem;
   
     --blur: blur(3px);
   }
-  /* .page{
-
-  } */
-
-  /* .page-section{
-    padding-top: .75rem;
-  }
-
-  .page-heading{
-    margin-top: 0rem;
-    font-size: calc(var(--font-size-small) + 8px);
-  }
-  
-  .page-heading > span{
-    font-size: calc(var(--font-size-small));
-  }
-
-  .home-cta{
-    margin-top: 1rem;
-    padding: .25rem 1.25rem;
-  } */
 
 }
