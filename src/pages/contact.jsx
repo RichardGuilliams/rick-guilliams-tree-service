@@ -62,7 +62,7 @@ const Contact = () => {
             <div className="page-overlay"/>
             <div className="page contact">
                 <div className='page-section'>
-                    <h1  className="contact-heading">Contact Us</h1>
+                    <h1  className="page-heading">Contact Us</h1>
                     <form className='form' onSubmit={handleSubmit}>
                         <div className='form-section'>
                             <label htmlFor="firstName"><span className='required'>*</span> First Name: </label>
