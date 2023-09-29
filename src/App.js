@@ -9,15 +9,6 @@ import {Route, Routes} from 'react-router-dom';
 import './App.css';
 
 function App() {
-  // const fetchData = async (data) => {
-  //   const results = await axios.post('.netlify/functions/helloWorld', data);
-  //   
-  // };
-
-  // useEffect(() => {
-  //   fetchData('hi')
-  // }, []);
-  
   return (
     <>
       <Header/>

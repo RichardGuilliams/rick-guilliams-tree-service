@@ -85,8 +85,10 @@
   
   --fill-width: 100%;
   --fill-height: 100%;
+  
+  --dropdown-icon-size: 2rem;
 
-  --blur: blur(3px);
+  --blur: blur(8px);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, div, span{
@@ -100,6 +102,29 @@ li{
 
 .hidden{
   display: none;
+}
+
+.header-dropdown{
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+.header-dropdown-btn{
+  border: none;
+  background-image: url(../public/img/dropdown.png);
+  background-position: center;
+  background-size: calc(var(--dropdown-icon-size) - 5px);
+  border-radius: 1000px;
+  background-repeat: no-repeat;
+  background-color: rgb(230, 230, 230);
+  display: none;
+  margin: auto;
+  padding: 1.25rem;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  min-width: var(--logo-size);
+  min-height: var(--logo-size);
 }
 
 .required{
@@ -125,6 +150,7 @@ li{
   background-color: var(--color-primary);
   border-radius: 1000px;
   margin: var(--logo-margin);
+  margin-left: .5rem;
   padding: var(--logo-padding);
   min-width: var(--logo-size);
   min-height: var(--logo-size);
@@ -147,13 +173,6 @@ li{
 
 .home{
   width: var(--page-width);
-}
-
-.header-dropdown{
-  min-width: var(--logo-size);
-  max-width: var(--logo-size);
-  min-height: var(--logo-size);
-  max-height: var(--logo-size);
 }
 
 .page{
@@ -278,7 +297,7 @@ li{
 .form{
   background-color: var(--color-background);
   padding: var(--card-padding);
-  backdrop-filter: blur(3px);
+  backdrop-filter: var(--blur)
 }
 
 .form-section{
@@ -321,7 +340,7 @@ li{
   padding: .5rem;;
   position: fixed;
   bottom: 0;
-  backdrop-filter: blur(3px);
+  backdrop-filter: var(--blur)
 }
 
 .footer-nav{
@@ -348,6 +367,11 @@ li{
   margin-top: var(--extra-space-big);
 }
 
+.about-section{
+  padding: 1.5rem;
+  backdrop-filter: var(--blur);
+}
+
 @media all and (max-width: 700px) {
   :root{
     --font-size-big: 1.75rem;
@@ -365,8 +389,6 @@ li{
     --extra-space-biggest: 5.5rem;
     --extra-space-big: 1.5rem;
     --extra-space-small: 1rem;
-    
-    --blur: blur(3px);
   }
   
   .contact-section{
@@ -374,7 +396,7 @@ li{
   }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 525px) {
   :root{
     --font-size-big: 1.75rem;
     --font-size-medium: 1.5rem;
@@ -390,8 +412,38 @@ li{
 
     --extra-space-big: 2.5rem;
     --extra-space-small: 1rem;
-  
-    --blur: blur(3px);
   }
+
+  .header-nav{
+    display: none;
+  }
+
+  .header-dropdown-btn{
+    display: inline-block;
+  }
+
+  .header-nav-item{
+    margin-top: .75rem;
+  }
+
+  .header-link{
+    font-size: 1rem;
+  }
+
+  .footer{
+    flex-direction: column;
+  }
+
+  .footer-link{
+    font-size: 12px;
+    padding: 0;
+    margin: .25rem;
+  }
+  
+  .footer-copyright{
+    font-size: 12px;
+    margin: .25rem;
+  }
+
 
 }
