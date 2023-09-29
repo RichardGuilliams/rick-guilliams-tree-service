@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import DropDown from './DropDown';
 
 const NavBar = () => {
-    // const [ display, setDisplay ] = useState('none');
-    // const handleClick = () => display === 'block' ? setDisplay('block') : setDisplay('none');
 
     return (
         <>
